@@ -1,0 +1,179 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;    
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+#banners .carousel {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+#banners .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#banners .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#produtos {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.produtos-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.produto-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.produto-card:hover {
+    transform: translateY(-10px);
+}
+
+.produto-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.produto-info h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.sobre-titulo {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.preco {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;  /* Ajuste para não ficar fixo */
+    width: 100%;
+    bottom: 0;
+}
+
+
+/* Media Queries para Responsividade */
+
+/* Para telas pequenas (celulares em modo retrato) */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .produtos-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto {
+        width: 80%; /* Produtos vão ocupar mais espaço */
+    }
+
+    #banners .carousel {
+        height: 200px;
+    }
+}
+
+/* Para telas médias (tablets) */
+@media (max-width: 900px) {
+    .produtos-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto {
+        width: 45%; /* Produtos ficam um pouco menores */
+    }
+
+    #banners .carousel {
+        height: 250px;
+    }
+}
+
+/* Para telas grandes (desktops) */
+@media (min-width: 901px) {
+    .produtos-list {
+        justify-content: space-around;
+    }
+
+    .produto {
+        width: 200px; /* Produtos com largura fixa */
+    }
+
+    #banners .carousel {
+        height: 300px;
+    }
+}
